@@ -1,3 +1,5 @@
+using UserManagementAPI.Routes;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,7 +17,7 @@ if (app.Environment.IsDevelopment())
     
 }
 
-app.MapGet("Person", () => "Ola Marcos");
+app.PersonRoutes();
 
 app.UseHttpsRedirection(); 
 app.Run();
