@@ -4,7 +4,7 @@ public static class PersonRoute
 {
     public static void PersonRoutes(this WebApplication app)
     {
-        app.MapGet("Person", () => "Ola Marcos");
+        app.MapGet("person", () => new Person (name: "Marcos"));
     }
         
 }

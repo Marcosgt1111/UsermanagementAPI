@@ -2,9 +2,12 @@
 
 public class Person
 {
-    public Guid Id { get; set;}
+    public Person (string name)
+    {
+        Name = name;
+        Id = Guid.NewGuid();
+    }
     
-    
-    public string? Name { get; set; }
-    public bool IsComplete { get; set; }
+    public Guid Id { get; init; }
+    public string Name { get; private set; }
 }
