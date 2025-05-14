@@ -1,6 +1,8 @@
+using UserManagementAPI.Data;
 using UserManagementAPI.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<PersonContext>();
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
